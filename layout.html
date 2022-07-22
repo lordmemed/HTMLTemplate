@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no" />
+	
+	<!-- Required meta tags for web content -->
+	<meta name="author" content="Hasan Al-Rauf">
+	<meta name="description" content="PHPTemplate with HTML as the template so the frontend designer can focus on designing the UX">
+	<meta name="keywords" content="PHPTemplate with HTML as Layout Template">
+
+	<!-- Head page title -->
+	<title>Web Title</title>
+
+	<!-- Fonts and icons -->
+	<link rel="icon" type="image/x-icon" href="icon.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="icon.png" />
+
+</head>
+<body>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			/* margin: 0 5px; */
+			clear: both;
+		}
+
+		header {
+			margin-bottom: 13px;
+		}
+
+		header .text-logo {
+			padding: 25px 5px;
+			border-radius: 0 0 15px 15px;
+			text-align: center;
+			background: #000;
+			color: #FFF;
+		}
+
+		.header {
+			overflow: hidden;
+		}
+
+		.navbar.fixed-left ul li, .navbar.fixed-left ul li.nav-item-right{
+			display: inline;
+			float: none;
+		}
+		.navbar.fixed-right ul li, .navbar.fixed-left ul li.nav-item-left {
+			display: inline;
+			float: none;
+		}
+
+		.navbar ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		.navbar ul li {
+			float: left;
+		}
+
+		.navbar ul li.nav-item-left {
+			float: left;
+		}
+
+		.navbar ul li.nav-item-right {
+			float: right;
+		}
+
+		.navbar ul li a {
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		/* Change the link color to #111(black) on hover */
+		.navbar ul li:hover:not(.active) a {
+			background-color: #ddd;
+			color: #111;
+		}
+		.navbar ul li:active:not(.active) a {
+			background-color: #aaa;
+		}
+
+		.navbar ul li.active a {
+			background-color: #4CAF50;
+			font-weight: bold;
+			color: #fff;
+		}
+
+
+		.container {
+			margin: 0 auto;
+			padding: 10px;
+			min-width: 90%;
+			min-height: 250px;
+			background: #EEE;
+			border-radius: 15px;
+			overflow: hidden;
+		}
+
+		.container .page-title {
+			margin-bottom: 15px;
+			padding-bottom: 5px;
+			border-bottom: 1px dashed #000;
+		}
+
+		.container .page-content {
+			/* */
+		}
+
+		.item-list ul.item {
+			list-style-type: none; padding: 0px; margin-bottom: 5px; overflow: hidden;
+		}
+		.item-list ul.item .title {
+			margin-top: 15px; float: left; width: 100%;
+		}
+		.item-list ul.item li {
+			float: left; background: #FFF; margin: 3px 3px 0px 0; 
+			border: 1px solid #AAA; border-radius: 5px; 
+			width: 125px; height: 208px; overflow: hidden;
+		}
+		.item-list ul.item li:hover {
+			border: 1px solid #FF45CC;
+			overflow: initial;
+		}
+		.item-list ul.item li a {
+			color: #000; text-decoration: none;
+		}
+		.item-list ul.item li a img {
+			width: 100%;
+			height: 179px;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+		.item-list ul.item li a div {
+			padding: 5px 3px;
+			width: 119px;
+			text-align: center;
+			background-color: #FFF;
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			/*height: 72px;*/
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+		.item-list ul.item li:hover a div {
+			position: absolute;
+			z-index: 9999;
+			margin: 0 -1px;
+			white-space: initial;
+			text-overflow: wrap;
+			border-left: 1px solid #FF45CC;
+			border-right: 1px solid #FF45CC;
+			border-bottom: 1px solid #FF45CC;
+			
+		}
+
+		.to-top {
+			position: fixed;
+			margin: 5px;
+			padding: 15px;
+			height: 32px; 
+			width: 64px;
+			right: 0;
+			bottom: 0;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #EEE;
+			opacity: .75;
+		}
+
+		footer {
+			margin-top: 13px;
+		}
+
+		footer .copyright {
+			padding: 25px 5px;
+			border-radius: 15px 15px 0 0;
+			text-align: center;
+			background: #CCC;
+		}
+	</style>
+
+	<header id="header">
+		<nav>
+			<div class="navbar">
+				<ul class="nav">
+					<li class="nav-item active">
+						<a href="/example/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="/example/list">Lists</a>
+					</li>
+					<li class="nav-item">
+						<a href="/example/pages/contact-us">Contact</a>
+					</li>
+					<li class="nav-item-right">
+						<a href="/example/pages/about-us">About</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="text-logo">
+			<h3>Layout Example</h3>
+		</div>
+	</header>
+
+	<div class="container">
+		<h2 class="page-title">
+			Page Title
+		</h2>
+		<article class="page-content">
+			<div class="item-list">
+				<ul class="item">
+					<div class="title"><b>#ALL</b> <span>(1 Title)</span></div>
+					<li>
+						<a title="Item" href="#url">
+							<img alt="Item Image" src="#cover">
+							<div>Item Title</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+	</div>
+	
+	<footer>
+		<div class="copyright">
+			PHPTemplate HTML Layout
+			&copy;
+			<script>document.write(new Date().getFullYear())</script>. 
+			With <span style="color: red;">❤</span> by
+			<a href="https://www.zulfikar.xyz" target="_blank">Zulfikar</a> for a better www.
+		</div>
+		<!-- your footer here -->
+		</div>
+	</footer>
+</body>
+</html>
